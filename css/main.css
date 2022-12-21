@@ -109,16 +109,24 @@ ul {
   display: none;
 }
 
+.contact {
+  position: relative;
+}
+
 .contact__number {
   color: var(--color-main);
   line-height: 14px;
 }
 
-.contact__number>img {
-  width: 15px;
-  height: 15px;
-  padding-right: 5px;
-  padding-top: 5px;
+.contact__number::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: -20px;
+  width: 13px;
+  height: 13px;
+  background-image: url(../src/img/main/phone.svg);
+  background-size: contain;
 }
 
 .header__lang {
@@ -518,12 +526,19 @@ input {
   font-weight: 400;
   font-size: 13px;
   line-height: 1.4;
+  outline: none;
+}
+
+input:focus {
+  border: 2px solid var(--color-accent);
 }
 
 input[type="text"] {
   background-image: url(../src/img/form_inner/user_name.svg);
   background-position: 10px 10px;
 }
+
+
 
 input[type="phone"] {
   background-image: url(../src/img/form_inner/phone.svg);
@@ -646,10 +661,21 @@ input::placeholder {
   color: var(--text-color-main);
   font-size: 14px;
   line-height: 16px;
+  position: relative;
 }
 
 .lang>span {
   font-weight: 600;
+}
+
+.lang>span::after {
+  content: "|";
+  position: absolute;
+  top: 0px;
+  left: 21px;
+  font-size: 18px;
+  color: red;
+  /*delete color*/
 }
 
 .time__work {

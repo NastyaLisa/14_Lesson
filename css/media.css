@@ -445,6 +445,11 @@
     padding-top: 18px;
   }
 
+  .nav__link:hover {
+    color: var(--color-accent);
+    cursor: pointer;
+  }
+
   .contact {
     padding-top: 16px;
   }
@@ -452,6 +457,15 @@
   .contact__number {
     line-height: 19px;
   }
+
+  .contact__number::before {
+    top: 18px;
+    left: -20px;
+    width: 18px;
+    height: 18px;
+
+  }
+
 
   .contact__number>img {
     width: 18px;
@@ -838,6 +852,12 @@
   .lang {
     font-size: 20px;
     line-height: 23px;
+  }
+
+  .lang>span::after {
+    left: 31px;
+    font-size: 26px;
+    color: red;
   }
 
   .time__work {
