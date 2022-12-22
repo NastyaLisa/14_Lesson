@@ -46,15 +46,26 @@ ul {
   padding: 0;
 }
 
+ul {
+  list-style: none;
+}
+
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  /* отображаем курсор в виде руки при наведении; некоторые
+  считают, что необходимо оставлять стрелочный вид для кнопок */
+  cursor: pointer;
+}
+
 .link {
   text-decoration: none;
   color: inherit;
 }
 
-ul {
-  list-style: none;
-  padding: 0;
-}
 
 .container {
   display: grid;
@@ -651,10 +662,15 @@ input::placeholder {
 
 .footer__nav__list>li:last-child {
   margin-top: 27px;
+  display: flex;
 }
 
 .footer__nav__link {
   color: var(--text--footer-color);
+}
+
+.footer__nav__link:hover {
+  color: var(--background-color);
 }
 
 .lang {
@@ -662,20 +678,21 @@ input::placeholder {
   font-size: 14px;
   line-height: 16px;
   position: relative;
+  /* white-space: pre-wrap; */
 }
 
-.lang>span {
+.lang__UA {
   font-weight: 600;
+  margin-right: 24px;
 }
 
-.lang>span::after {
+.lang__UA::after {
   content: "|";
   position: absolute;
   top: 0px;
-  left: 21px;
+  left: 37px;
   font-size: 18px;
-  color: red;
-  /*delete color*/
+  color: var(--color-main);
 }
 
 .time__work {
@@ -727,17 +744,96 @@ address>span {
   margin-bottom: 0;
 }
 
-.footer__contacts__item>a>img {
-  margin-right: 15px;
+.footer__link__number,
+.footer__link__insta,
+.footer__link__mail {
+  position: relative;
+  padding-left: 40px;
 }
 
-.footer__contacts__item:last-child>a>img {
-  margin-right: 11px;
+.footer__link__number::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 27px;
+  height: 27px;
+  background-image: url(../src/img/footer/phone.svg);
+  background-size: contain;
 }
 
-.footer__contacts__item>a {
-  display: flex;
-  align-items: center;
+.footer__link__insta::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 27px;
+  height: 27px;
+  background-image: url(../src/img/footer/instagram.svg);
+  background-size: contain;
+}
+
+.footer__link__mail::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 32px;
+  height: 32px;
+  background-image: url(../src/img/footer/Email.svg);
+  background-size: contain;
+}
+
+
+.footer__link__number:hover::after {
+  visibility: visible;
+}
+
+.footer__link__number::after {
+  content: "";
+  position: absolute;
+  left: 40px;
+  bottom: 0;
+  right: 0;
+  width: 200px;
+  background: red;
+  height: 2px;
+  visibility: hidden;
+
+}
+
+.footer__link__insta:hover::after {
+  visibility: visible;
+}
+
+.footer__link__insta::after {
+  content: "";
+  position: absolute;
+  left: 40px;
+  bottom: 0;
+  right: 0;
+  width: 70px;
+  background: red;
+  height: 2px;
+  visibility: hidden;
+
+}
+
+.footer__link__mail:hover::after {
+  visibility: visible;
+}
+
+.footer__link__mail::after {
+  content: "";
+  position: absolute;
+  left: 40px;
+  bottom: 0;
+  right: 0;
+  width: 170px;
+  background: red;
+  height: 2px;
+  visibility: hidden;
+
 }
 
 .social {
@@ -748,6 +844,7 @@ address>span {
 .social>a>img {
   padding-right: 22px;
 }
+
 
 .copyright {
   margin: 36px 0 36px 189px;
