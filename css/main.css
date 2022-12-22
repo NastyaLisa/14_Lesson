@@ -140,6 +140,11 @@ button {
   background-size: contain;
 }
 
+.contact__number:hover {
+  color: var(--color-accent);
+  cursor: pointer;
+}
+
 .header__lang {
   display: none;
 }
@@ -674,23 +679,23 @@ input::placeholder {
 }
 
 .lang {
-  color: var(--text-color-main);
+  color: var(--color-main);
   font-size: 14px;
   line-height: 16px;
   position: relative;
-  /* white-space: pre-wrap; */
+
 }
 
 .lang__UA {
   font-weight: 600;
-  margin-right: 24px;
+  margin-right: 18px;
 }
 
 .lang__UA::after {
   content: "|";
   position: absolute;
   top: 0px;
-  left: 37px;
+  left: 25px;
   font-size: 18px;
   color: var(--color-main);
 }
@@ -740,7 +745,8 @@ address>span {
   margin-bottom: 25px;
 }
 
-.footer__contacts__item:last-child {
+.footer__contacts__item:last-child,
+.footer__contacts__item:nth-child(3) {
   margin-bottom: 0;
 }
 
@@ -749,12 +755,13 @@ address>span {
 .footer__link__mail {
   position: relative;
   padding-left: 40px;
+  width: fit-content;
 }
 
 .footer__link__number::before {
   content: "";
   position: absolute;
-  top: 0px;
+  top: -2px;
   left: 0px;
   width: 27px;
   height: 27px;
@@ -765,7 +772,7 @@ address>span {
 .footer__link__insta::before {
   content: "";
   position: absolute;
-  top: 0px;
+  top: -3px;
   left: 0px;
   width: 27px;
   height: 27px;
@@ -776,8 +783,8 @@ address>span {
 .footer__link__mail::before {
   content: "";
   position: absolute;
-  top: 0px;
-  left: 0px;
+  top: -3px;
+  left: -2px;
   width: 32px;
   height: 32px;
   background-image: url(../src/img/footer/Email.svg);
@@ -793,10 +800,9 @@ address>span {
   content: "";
   position: absolute;
   left: 40px;
-  bottom: 0;
+  bottom: -3px;
   right: 0;
-  width: 200px;
-  background: red;
+  background: var(--background-color);
   height: 2px;
   visibility: hidden;
 
@@ -810,10 +816,9 @@ address>span {
   content: "";
   position: absolute;
   left: 40px;
-  bottom: 0;
+  bottom: -1px;
   right: 0;
-  width: 70px;
-  background: red;
+  background: var(--background-color);
   height: 2px;
   visibility: hidden;
 
@@ -827,10 +832,9 @@ address>span {
   content: "";
   position: absolute;
   left: 40px;
-  bottom: 0;
+  bottom: -3px;
   right: 0;
-  width: 170px;
-  background: red;
+  background: var(--background-color);
   height: 2px;
   visibility: hidden;
 

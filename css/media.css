@@ -41,9 +41,17 @@
     line-height: 19px;
   }
 
-  .contact__number>img {
-    padding: 0;
+  .contact__number::before {
+    top: 2px;
+    width: 15px;
+    height: 15px;
   }
+
+  .nav__link:hover {
+    color: var(--color-accent);
+    cursor: pointer;
+  }
+
 
   /*about*/
   .about {
@@ -336,7 +344,17 @@
 
   .lang {
     font-size: 20px;
-    line-height: 23px;
+    line-height: 24px;
+  }
+
+  .lang__UA {
+    margin-right: 20px;
+  }
+
+  .lang__UA::after {
+    left: 34px;
+    font-size: 20px;
+
   }
 
   .time__work {
@@ -452,6 +470,7 @@
 
   .contact {
     padding-top: 16px;
+    padding-left: 5px;
   }
 
   .contact__number {
@@ -463,21 +482,30 @@
     left: -20px;
     width: 18px;
     height: 18px;
-
-  }
-
-
-  .contact__number>img {
-    width: 18px;
-    height: 18px;
   }
 
   .header__lang {
-    display: inline-block;
+    display: flex;
     font-size: 20px;
     line-height: 23px;
     padding-top: 18px;
   }
+
+  .lang {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .lang__UA {
+    margin-right: 24px;
+  }
+
+  .lang__UA::after {
+    left: 37px;
+    font-size: 20px;
+
+  }
+
 
   /*about*/
   .about {
@@ -849,17 +877,6 @@
     font-size: 20px;
   }
 
-  .lang {
-    font-size: 20px;
-    line-height: 23px;
-  }
-
-  .lang>span::after {
-    left: 31px;
-    font-size: 26px;
-    color: red;
-  }
-
   .time__work {
     font-size: 20px;
     margin: 75px 0 0 160px;
@@ -896,12 +913,16 @@
     margin-bottom: 20px;
   }
 
-  .footer__contacts__item>a>img {
-    margin-right: 15px;
+  .footer__link__number::before {
+    top: 0px;
   }
 
-  .footer__contacts__item:last-child>a>img {
-    margin-right: 6px;
+  .footer__link__insta::before {
+    top: 0px;
+  }
+
+  .footer__link__mail::before {
+    top: 0px;
   }
 
   .social {
